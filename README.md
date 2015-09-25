@@ -1,6 +1,7 @@
 # Getting Started
 #####First make a new object.
 ```sh
+require('Class.DB.php');
 $connect = new PDO('mysql:host='localhost';dbname='DatebaseName', 'root', 'root');
 $DB = new DB($connect);
 ```
