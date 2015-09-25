@@ -14,11 +14,19 @@ $DB = new DB($connect);
   Output: Array ( [FirstName] => "Peter" [LastName] => "Manuel" )
 ```
 # Functions
-* FetchSingle($sql) array
-* FetchLoop($sql) array
-* CountRows($sql) int
-* InsertDataArray($sql,$array) void
-* UpdateTable($sql) void
+```sh
+$DB->FetchSingle($sql); //Returns array
+$DB->FetchLoop($sql); //Returns array
+$DB->CountRows($sql); //Returns int
+$DB->InsertDataArray($sql,$array); //Returns void
+$DB->UpdateTable($sql); //Returns void
+```
+#####Inserting data to your database
+```sh
+$sql = "INSERT INTO Employees VALUES(?,?,?)";
+$array = array(10,Peter,Manuel);
+$DB->InsertDataArray($sql,$array);
+```
 
 #####Constructor
 The constructor just takes the PDO object.
